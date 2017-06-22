@@ -1,0 +1,87 @@
+.container {
+  padding-top: 30px;
+  text-align: center;
+  background-color: #EEEEEE;
+  height: 100%;
+}
+
+.data {
+  & strong {
+    font-size: 18px;
+  }
+
+  & span {
+    margin-left: 5px;
+  }
+
+  & p {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+.card {
+  justify-content: center; //???
+  display: flex;
+  background-color: white;
+  margin: 0.5em;
+  border-width: 0px 1px 1px;
+  border-color: #BDBDBD;
+  border-style: solid;
+  height: 60px;
+}
+
+.hora {
+  font-size: 18px;
+  width: 5em;
+  align-self: center;
+}
+
+.tagdata {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 10em;
+
+  & span {
+    color: white;
+    padding: 0.25em;
+    background-color: black;
+  }
+}
+
+.assunto {
+  text-align: left;
+  align-self: center;
+  width: calc(100% - 40em);
+
+  & p {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  width: 20em;
+
+  & img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 14em;
+
+  & i {
+    width: 25px;
+  }
+}
