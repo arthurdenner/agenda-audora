@@ -13,7 +13,9 @@ const menuItems = [
 const Header = () => (
   <header className={styles.header}>
     <section className={styles.submenu}>
-      {menuItems.map(item => <i className={`mdi mdi-${item.icon}`} />)}
+      {menuItems.map(item => (
+        <i key={Math.random()} className={`mdi mdi-${item.icon}`} />
+      ))}
     </section>
     <section className={styles.submenu}>
       <Dropdown />
