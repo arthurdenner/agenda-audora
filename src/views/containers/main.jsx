@@ -5,7 +5,7 @@ import Home from './home';
 const Main = () => (
   <div
     style={{
-      background: '#f8f8f8',
+      background: '#EEEEEE',
       position: 'absolute',
       overflow: 'hidden',
       top: 0,
