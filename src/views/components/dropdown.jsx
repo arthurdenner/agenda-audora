@@ -33,7 +33,7 @@ class Dropdown extends PureComponent {
           <span>{selectedItem}</span>
           <i className="mdi mdi-menu-down" />
         </div>
-        <div style={{ marginTop: '-40px' }}>
+        <div className={styles.options}>
           {isListVisible && items.map(item => (
             <div
               key={Math.random()}
