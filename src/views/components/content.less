@@ -1,22 +1,37 @@
+@bg-color: #EEEEEE;
+
 .container {
   padding-top: 30px;
   text-align: center;
-  background-color: #EEEEEE;
+  background-color: @bg-color;
   height: 100%;
+  font-size: 12px;
 }
 
 .data {
   & strong {
     font-size: 18px;
+    font-weight: normal;
   }
 
   & span {
-    margin-left: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #42A5F5;
+
+    &:first-child {
+      color: black;
+      cursor: text !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   & p {
-    margin-top: 5px;
-    font-size: 12px;
+    margin-top: 3px;
+    font-size: 11px;
   }
 }
 
@@ -26,9 +41,10 @@
   background-color: white;
   margin: 0.5em;
   border-width: 0px 1px 1px;
-  border-color: #BDBDBD;
+  border-color: darken(@bg-color, 10%);
   border-style: solid;
   height: 60px;
+  cursor: pointer;
 }
 
 .hora {
@@ -45,7 +61,7 @@
 
   & span {
     color: white;
-    padding: 0.25em;
+    padding: 0.3em;
     background-color: black;
   }
 }
@@ -57,8 +73,8 @@
 
   & p {
     margin-top: 0px;
-    margin-bottom: 3px;
-    font-size: 12px;
+    margin-bottom: 5px;
+    font-size: 11px;
   }
 }
 
@@ -66,6 +82,7 @@
   display: flex;
   align-items: center;
   width: 20em;
+  font-weight: bold;
 
   & img {
     border-radius: 50%;
@@ -83,5 +100,13 @@
 
   & i {
     width: 25px;
+    font-size: 16px;
+    // color: #BDBDBD; disabled
+    color: #9E9E9E;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
   }
 }

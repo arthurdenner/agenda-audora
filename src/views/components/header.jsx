@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './header.less';
+import Dropdown from './dropdown';
 
 const Header = () => (
   <header className={styles.header}>
@@ -10,9 +11,9 @@ const Header = () => (
       <i className="mdi mdi-calendar" />
       <i className="mdi mdi-plus" />
     </section>
-    <section>
-      <div>Maceió</div>
-      <div>Tudo</div>
+    <section className={styles.submenu}>
+      <Dropdown />
+      <Dropdown />
     </section>
   </header>
 );

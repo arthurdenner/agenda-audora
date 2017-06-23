@@ -3,7 +3,7 @@ import Header from '~/views/components/header';
 import Content from '~/views/components/content';
 
 const Home = () => (
-  <div>
+  <div style={{ height: '100%' }}>
     <Header />
     <Content />
   </div>

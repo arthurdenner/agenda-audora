@@ -4,7 +4,7 @@ import styles from './content.less';
 const Content = () => (
   <main className={styles.container}>
     <div className={styles.data}>
-      <strong>HOJE</strong><span>+</span>
+      <span>HOJE</span><span>+</span>
       <p>20 de abril de 2015</p>
     </div>
     <div className={styles.card}>
