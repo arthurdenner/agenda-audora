@@ -2,6 +2,10 @@ import React from 'react';
 import styles from './header.less';
 import Dropdown from './dropdown';
 
+const itemsDD1 = ['Maceió', 'Aracaju', 'Itabaiana', 'Estância', 'Propriá'];
+const itemsDD2 = ['Meu Departamento', 'Meus Agendamentos', 'Como Responsável',
+  'Departamento', 'Colaborador', 'Atrasados'];
+
 const menuItems = [
   { icon: 'reload', tooltip: 'Hoje' },
   { icon: 'magnify', tooltip: 'Buscar' },
@@ -18,8 +22,8 @@ const Header = () => (
       ))}
     </section>
     <section className={styles.submenu}>
-      <Dropdown />
-      <Dropdown />
+      <Dropdown items={itemsDD1} initialValue="Maceió" />
+      <Dropdown items={itemsDD2} initialValue="Tudo" />
     </section>
   </header>
 );

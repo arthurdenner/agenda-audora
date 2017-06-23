@@ -1,36 +1,49 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import onClickOutside from 'react-onclickoutside';
 import styles from './dropdown.less';
 
 class Dropdown extends PureComponent {
-  state = { isListVisible: false };
+  static propTypes = {
+    initialValue: PropTypes.string.isRequired,
+    items: PropTypes.array.isRequired,
+  };
+
+  state = {
+    isListVisible: false,
+    selectedItem: this.props.initialValue,
+  };
 
   controlList = () => this.setState({ isListVisible: true });
 
   handleClickOutside = () => this.setState({ isListVisible: false });
 
+  handleSelectItem = (selectedItem) => {
+    this.setState({ selectedItem });
+    this.handleClickOutside();
+  };
+
   render() {
-    const { isListVisible } = this.state;
+    const { isListVisible, selectedItem } = this.state;
+    const { items } = this.props;
 
     return (
       <div style={{ zIndex: 1 }}>
         <div className={styles.container} onClick={this.controlList}>
-          <span>Maceió</span>
+          <span>{selectedItem}</span>
           <i className="mdi mdi-menu-down" />
         </div>
-        {isListVisible && (
-          <div style={{ marginTop: '-40px' }}>
-            <div className={styles.option}>
-              <span>DDD</span>
+        <div style={{ marginTop: '-40px' }}>
+          {isListVisible && items.map(item => (
+            <div
+              key={Math.random()}
+              onClick={() => this.handleSelectItem(item)}
+              className={styles.option}
+            >
+              <span>{item}</span>
             </div>
-            <div className={styles.option}>
-              <span>DDD</span>
-            </div>
-            <div className={styles.option}>
-              <span>DDD</span>
-            </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     );
   }
