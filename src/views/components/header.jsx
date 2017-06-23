@@ -18,12 +18,14 @@ const Header = () => (
   <header className={styles.header}>
     <section className={styles.submenu}>
       {menuItems.map(item => (
-        <i key={Math.random()} className={`mdi mdi-${item.icon}`} />
+        <div key={Math.random()} className={styles.tooltip} data-tooltip={item.tooltip} >
+          <i className={`mdi mdi-${item.icon}`} data-tooltip="I’m the tooltip text." />
+        </div>
       ))}
     </section>
     <section className={styles.submenu}>
-      <Dropdown items={itemsDD1} initialValue="Maceió" />
-      <Dropdown items={itemsDD2} initialValue="Tudo" />
+      <Dropdown items={itemsDD1} initialValue="Maceió" style={styles.dropdown1} />
+      <Dropdown items={itemsDD2} initialValue="Tudo" style={styles.dropdown2} />
     </section>
   </header>
 );

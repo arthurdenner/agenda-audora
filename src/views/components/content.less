@@ -1,32 +1,28 @@
 .container {
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center;
   font-size: 12px;
 }
 
 .data {
-  & strong {
-    font-size: 18px;
-    font-weight: normal;
-  }
-
-  & span {
-    margin-left: 10px;
-    font-size: 18px;
-    color: #42A5F5;
-
-    &:first-child {
-      color: black;
-      cursor: text !important;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
+  margin-bottom: 10px;
 
   & p {
-    margin-top: 3px;
     font-size: 11px;
+    margin: 5px;
+
+    &:first-child {
+      font-size: 18px;
+    }
+
+    & span {
+      margin-left: 10px;
+      font-size: 18px;
+      color: #42A5F5;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }

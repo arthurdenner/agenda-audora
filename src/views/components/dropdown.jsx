@@ -7,6 +7,7 @@ class Dropdown extends PureComponent {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
     items: PropTypes.array.isRequired,
+    style: PropTypes.string.isRequired,
   };
 
   state = {
@@ -25,7 +26,7 @@ class Dropdown extends PureComponent {
 
   render() {
     const { isListVisible, selectedItem } = this.state;
-    const { items } = this.props;
+    const { items, style } = this.props;
 
     return (
       <div style={{ zIndex: 1 }}>
@@ -33,7 +34,7 @@ class Dropdown extends PureComponent {
           <span>{selectedItem}</span>
           <i className="mdi mdi-menu-down" />
         </div>
-        <div style={{ marginTop: '-40px' }}>
+        <div className={style}>
           {isListVisible && items.map(item => (
             <div
               key={Math.random()}
