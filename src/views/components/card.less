@@ -1,0 +1,87 @@
+.card {
+  justify-content: center; //???
+  display: flex;
+  background-color: white;
+  margin: 0.5em;
+  border-width: 0px 1px 1px;
+  border-color: #D5D5D5;
+  border-style: solid;
+  min-height: 60px;
+  cursor: pointer;
+}
+
+.hora {
+  font-size: 18px;
+  width: 5em;
+  align-self: center;
+}
+
+.tagdata {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 10em;
+
+  & span {
+    color: white;
+    padding: 0.3em;
+    background-color: black;
+  }
+}
+
+.container {
+  width: calc(100% - 15em);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.informacoesPrincipais {
+  width: 100%;
+  display: flex;
+  margin: 0.5em auto;
+}
+
+.assunto {
+  text-align: left;
+  align-self: center;
+  width: calc(100% - 35em);
+
+  & p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  width: 32em;
+  font-weight: bold;
+
+  & img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 18em;
+
+  & i {
+    width: 25px;
+    font-size: 16px;
+    // color: #BDBDBD; disabled
+    color: #9E9E9E;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+}

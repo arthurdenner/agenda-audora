@@ -1,0 +1,33 @@
+.container {
+  padding-top: 30px;
+  text-align: center;
+  height: 100%;
+  font-size: 12px;
+}
+
+.data {
+  & strong {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  & span {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #42A5F5;
+
+    &:first-child {
+      color: black;
+      cursor: text !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & p {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+}
