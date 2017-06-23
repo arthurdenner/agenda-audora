@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './extra-info.less';
 
-const ExtraInfo = ({ infos }) => (
-  <div className={styles.container}>
+const ExtraInfo = ({ infos, isOpen }) => (
+  <div className={isOpen ? styles.show : styles.hide}>
     {Object.keys(infos).map(key => (
       <div key={key} className={styles.info}>
         <div className={styles.infos}>
@@ -18,6 +18,7 @@ const ExtraInfo = ({ infos }) => (
 
 ExtraInfo.propTypes = {
   infos: PropTypes.object.isRequired,
+  isOpen: PropTypes.bool.isRequired,
 };
 
 export default ExtraInfo;

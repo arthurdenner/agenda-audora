@@ -50,6 +50,7 @@ class Card extends PureComponent {
           </div>
           <ExtraInfo
             infos={compromisso.extraInfo}
+            isOpen={isExtraInfoOpen}
           />
         </div>
       </div>
