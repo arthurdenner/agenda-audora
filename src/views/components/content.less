@@ -1,67 +1,28 @@
 .container {
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center;
   font-size: 12px;
 }
 
 .data {
-  & strong {
-    font-size: 18px;
-    font-weight: normal;
-  }
+  margin-bottom: 10px;
 
-  & span {
-    margin-left: 10px;
-    font-size: 18px;
-    color: #42A5F5;
+  & p {
+    font-size: 11px;
+    margin: 5px;
 
     &:first-child {
-      color: black;
-      cursor: text !important;
+      font-size: 18px;
     }
 
-    &:hover {
-      cursor: pointer;
+    & span {
+      margin-left: 10px;
+      font-size: 18px;
+      color: #42A5F5;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
-}
-
-.tooltip {
-  width: 20px;
-  // display: flex;
-  justify-content: center;
-}
-
-.tooltip:after {
-  content: attr(data-tooltip);
-  display: inline;
-  position: absolute;
-  color: white;
-  background: black;
-  padding: 7px;
-  top: 100px;
-  text-align: center;
-  display: none;
-  line-height: 1.3;
-  border-radius: 3px;
-  font-size: 12px;
-}
-
-.tooltip:before {
-  content: "";
-  background: #08C;
-  transform: rotate(45deg);
-  width: 10px;
-  height: 10px;
-  top: -20px;
-  position: absolute;
-  left: 50%;
-  margin-left: -5px;
-  display: none;
-  z-index: 2;
-}
-
-.tooltip:hover:after,
-.tooltip:hover:before {
-  display: block;
 }

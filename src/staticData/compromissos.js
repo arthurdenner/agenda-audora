@@ -22,8 +22,8 @@ const compromissos = [
     local: 'Atlântica Serviços e Transportes LTDA.',
     assunto: 'Petição Inicial',
     horario: '2017-04-20 16:15:00.000Z',
-    responsavel: 'James Ford',
-    imgResponsavel: 'https://s-media-cache-ak0.pinimg.com/originals/14/3d/6b/143d6bfea7d2ecbfc61a0467f2f6261d.jpg',
+    responsavel: 'John Locke',
+    imgResponsavel: 'https://ewedit.files.wordpress.com/2015/01/lost-john-locke.jpg?w=612',
     comparecido: false,
     extraInfo: {
       id: '7854',
@@ -40,8 +40,8 @@ const compromissos = [
     local: 'VSA EMPREENDIMENTO IMOBILIÁRIO SPE LTDA.',
     assunto: 'Defesa Administrativa',
     horario: '2017-04-20 17:00:00.000Z',
-    responsavel: 'James Ford',
-    imgResponsavel: 'https://s-media-cache-ak0.pinimg.com/originals/14/3d/6b/143d6bfea7d2ecbfc61a0467f2f6261d.jpg',
+    responsavel: 'Jack Shepard',
+    imgResponsavel: 'http://images2.fanpop.com/image/photos/9400000/jack-shephard-lost-9436809-550-733.jpg',
     comparecido: true,
     extraInfo: {
       id: '7854',

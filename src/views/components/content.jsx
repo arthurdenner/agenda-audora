@@ -6,10 +6,9 @@ import styles from './content.less';
 const Content = ({ compromissos }) => (
   <main className={styles.container}>
     <div className={styles.data}>
-      <span>HOJE</span>
-      <span className={styles.tooltip} data-tooltip="Novo">+</span>
+      <p>HOJE<span>+</span></p>
+      <p>20 de abril de 2015</p>
     </div>
-    <p>20 de abril de 2015</p>
     {compromissos.map(item => (<Card key={item._id} compromisso={item} />))}
   </main>
 );
