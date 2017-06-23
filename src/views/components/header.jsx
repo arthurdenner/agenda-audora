@@ -2,14 +2,18 @@ import React from 'react';
 import styles from './header.less';
 import Dropdown from './dropdown';
 
+const menuItems = [
+  { icon: 'reload', tooltip: 'Hoje' },
+  { icon: 'magnify', tooltip: 'Buscar' },
+  { icon: 'printer', tooltip: 'Imprimir' },
+  { icon: 'calendar', tooltip: 'Calendário' },
+  { icon: 'plus', tooltip: 'Novo' },
+];
+
 const Header = () => (
   <header className={styles.header}>
     <section className={styles.submenu}>
-      <i className="mdi mdi-reload" />
-      <i className="mdi mdi-magnify" />
-      <i className="mdi mdi-printer" />
-      <i className="mdi mdi-calendar" />
-      <i className="mdi mdi-plus" />
+      {menuItems.map(item => <i className={`mdi mdi-${item.icon}`} />)}
     </section>
     <section className={styles.submenu}>
       <Dropdown />
