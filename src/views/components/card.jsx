@@ -30,7 +30,12 @@ class Card extends PureComponent {
     return (
       <div className={styles.card} onClick={this.controlExtraInfo}>
         <span className={styles.hora}>{getHora(compromisso.horario)}</span>
-        <p className={styles.tagdata}><span>HOJE</span></p>
+        <p className={styles.tagdata}>
+          {compromisso.comparecido ?
+            <i className="mdi mdi-check" style={{ fontSize: '20px', color: 'green' }} /> :
+            <span>HOJE</span>
+          }
+        </p>
         <div className={styles.container}>
           <div className={styles.informacoesPrincipais}>
             <div className={styles.assunto}>
@@ -39,10 +44,10 @@ class Card extends PureComponent {
             </div>
             <div className={styles.usuario}>
               <img
-                alt="James Ford"
-                src="https://s-media-cache-ak0.pinimg.com/originals/14/3d/6b/143d6bfea7d2ecbfc61a0467f2f6261d.jpg"
+                alt={compromisso.responsavel}
+                src={compromisso.imgResponsavel}
               />
-              <p>James Ford</p>
+              <p>{compromisso.responsavel}</p>
             </div>
             <div className={styles.botoes}>
               {botoes.map(item => <i key={Math.random()} className={`mdi mdi-${item}`} />)}
