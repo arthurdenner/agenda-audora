@@ -21,7 +21,7 @@ class Home extends PureComponent {
     const { compromissos } = this.props;
 
     return (
-      <div style={{ height: '100%' }}>
+      <div>
         <Header />
         <Content compromissos={compromissos} />
       </div>

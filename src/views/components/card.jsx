@@ -1,18 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import moment from 'moment';
 import ExtraInfo from './extra-info';
 import styles from './card.less';
 
+const getHora = date => moment(date).format('HH:mm');
+
 const botoes = ['folder-outline', 'check', 'pencil', 'close-circle'];
 
-const Card = () => (
+const Card = ({ compromisso }) => (
   <div className={styles.card}>
-    <span className={styles.hora}>14:00</span>
+    <span className={styles.hora}>{getHora(compromisso.horario)}</span>
     <p className={styles.tagdata}><span>HOJE</span></p>
     <div className={styles.container}>
       <div className={styles.informacoesPrincipais}>
         <div className={styles.assunto}>
-          <p>Santa Casa</p>
-          <strong>Requerimento</strong>
+          <p>{compromisso.local}</p>
+          <strong>{compromisso.assunto}</strong>
         </div>
         <div className={styles.usuario}>
           <img
@@ -22,12 +26,16 @@ const Card = () => (
           <p>James Ford</p>
         </div>
         <div className={styles.botoes}>
-          {botoes.map(item => <i className={`mdi mdi-${item}`} />)}
+          {botoes.map(item => <i key={Math.random()} className={`mdi mdi-${item}`} />)}
         </div>
       </div>
-      <ExtraInfo />
+      <ExtraInfo infos={compromisso.extraInfo} />
     </div>
   </div>
 );
+
+Card.propTypes = {
+  compromisso: PropTypes.object.isRequired,
+};
 
 export default Card;

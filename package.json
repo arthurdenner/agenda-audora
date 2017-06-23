@@ -57,6 +57,7 @@
     "less-loader": "^4.0.3",
     "lodash": "^4.17.4",
     "lodash-webpack-plugin": "^0.11.3",
+    "moment": "^2.18.1",
     "npm-run-all": "^4.0.2",
     "postcss-loader": "^2.0.5",
     "prop-types": "^15.5.10",

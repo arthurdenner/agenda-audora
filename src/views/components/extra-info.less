@@ -1,5 +1,4 @@
 .container {
-  width: 100%;
   background-color: #F5F5F5;
   margin-bottom: 0.8em;
   padding: 1em;
@@ -10,15 +9,27 @@
 
   & p {
     margin: 0.2em 0;
+    width: calc(100% - 15em);
+    text-align: left;
   }
 }
 
+.info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 2em;
+}
+
 .infos {
+  min-width: 11em;
   width: 15em;
   color: #828282;
+  text-transform: uppercase;
+  font-size: 11px;
 }
 
 .divider {
   border-right: 1px solid #BDBDBD;
-  margin: auto 0.5em;
+  margin: auto 0.8em;
 }
